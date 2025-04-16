@@ -12,68 +12,24 @@
       color: #333;
       background-color: #fff;
     }
-    <header>
+    header {
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-<div class="video-bg">
-    <video autoplay muted loop playsinline>
-        <source src="IMG_5010.MOV" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-    <div class="overlay"></div>
-    <div class="hero-text">
-        <h1 class="lang ru">ВИЛЛА МЕЧТЫ<br>в Компоаморе на Коста-Бланке</h1>
-        <h1 class="lang en active">DREAM VILLA<br>in Campoamor on the Costa Blanca</h1>
-        <h1 class="lang pl">WILLA MARZEŃ<br>w Campoamor na Costa Blanca</h1>
-        <h1 class="lang es">VILLA DE ENSUEÑO<br>en Campoamor, Costa Blanca</h1>
-        <nav class="lang-switcher">
-            <button onclick="switchLang('en')" style="background-image: url('https://flagcdn.com/w320/gb.png');">EN</button>
-            <button onclick="switchLang('ru')" style="background-image: url('https://flagcdn.com/w320/ru.png');">RU</button>
-            <button onclick="switchLang('pl')" style="background-image: url('https://flagcdn.com/w320/pl.png');">PL</button>
-            <button onclick="switchLang('es')" style="background-image: url('https://flagcdn.com/w320/es.png');">ES</button>
-        </nav>
-    </div>
-</div>
-
-
-    
-</header>
-
-<style>
-  .video-bg {
-    position: relative;
-    width: 100% !important;
-    height: 100vh !important; /* Делает высоту блока на 100% от экрана */
-  }
-  .video-bg iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover;
-  }
-</style>  
-  </div>
-    <section class="gallery">
-    <a href="photo1.jpg" target="_blank"><img src="photo1.jpg" alt="Photo 1"></a>
-    <a href="photo2.jpg" target="_blank"><img src="photo2.jpg" alt="Photo 2"></a>
-    <a href="photo3.jpg" target="_blank"><img src="photo3.jpg" alt="Photo 3"></a>
-    <a href="photo4.jpg" target="_blank"><img src="photo4.jpg" alt="Photo 4"></a>
-    <a href="photo5.jpg" target="_blank"><img src="photo5.jpg" alt="Photo 5"></a>
-    <a href="photo6.jpg" target="_blank"><img src="photo6.jpg" alt="Photo 6"></a>
-  </section>    .video-bg {
+    .video-bg {
       position: relative;
       width: 100%;
       height: 100%;
     }
-    .video-bg video {
+    .video-bg iframe {
       position: absolute;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100% !important;
+      height: 100% !important;
       object-fit: cover;
-      z-index: 1;
     }
     .video-bg .overlay {
       position: absolute;
@@ -101,28 +57,28 @@
       text-shadow: 0 2px 6px rgba(0,0,0,0.5);
     }
     nav.lang-switcher {
-  margin-top: 20px;
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-}
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
     nav.lang-switcher button {
-  margin: 0 5px;
-  padding: 10px 18px;
-  font-weight: 600;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: all 0.2s ease;
-  font-size: 1em;
-  text-transform: uppercase;
-  position: relative;
-}
+      margin: 0 5px;
+      padding: 10px 18px;
+      font-weight: 600;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: all 0.2s ease;
+      font-size: 1em;
+      text-transform: uppercase;
+      position: relative;
+    }
     .lang { display: none; }
     .lang.active { display: block; }
     section.description, section.gallery, section.contact {
@@ -140,13 +96,13 @@
       justify-content: center;
     }
     section.gallery img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  transition: transform 0.4s ease, z-index 0.4s ease;
-  z-index: 1;
-  position: relative;
-}
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      transition: transform 0.4s ease, z-index 0.4s ease;
+      z-index: 1;
+      position: relative;
+    }
     .gallery .main-photo {
       flex: 1 1 100%;
       max-height: 600px;
@@ -161,220 +117,143 @@
       margin-bottom: 20px;
     }
     .contact a {
-  display: inline-block;
-  background-color: #25D366;
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
-  padding: 15px 30px;
-  border-radius: 30px;
-  font-size: 1.1em;
-  transition: all 0.2s ease;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
-  transform: scale(1);
-}
+      display: inline-block;
+      background-color: #25D366;
+      color: #333;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.1em;
+      transition: all 0.2s ease;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      transform: scale(1);
+    }
     .contact a:hover {
       background-color: #1DA851;
     }
-  .features {
-  margin-top: 40px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  font-size: 1.1em;
-}
-.features div {
-  background: #f9f9f9;
-  border-radius: 12px;
-  padding: 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease;
-}
-.features div:hover {
-  transform: translateY(-4px);
-}
-$1
-  position: relative;
-  cursor: default;
-}section.gallery img:hover {
-  transform: scale(1.1);
-  z-index: 10;
-  box-shadow: none;
-}
-nav.lang-switcher button:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
+    .features {
+      margin-top: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      font-size: 1.1em;
+    }
+    .features div {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
+    }
+    .features div:hover {
+      transform: translateY(-4px);
+    }
+    section.gallery img:hover {
+      transform: scale(1.1);
+      z-index: 10;
+      box-shadow: none;
+    }
+    nav.lang-switcher button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    }
 
-nav.lang-switcher button:active {
-  transform: scale(0.97);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-}
-@keyframes glow {
-  from { box-shadow: 0 0 10px rgba(44, 122, 123, 0.3); }
-  to { box-shadow: 0 0 30px rgba(44, 122, 123, 0.7); }
-}
-.contact a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-}
+    nav.lang-switcher button:active {
+      transform: scale(0.97);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes glow {
+      from { box-shadow: 0 0 10px rgba(44, 122, 123, 0.3); }
+      to { box-shadow: 0 0 30px rgba(44, 122, 123, 0.7); }
+    }
+    .contact a:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
 
-.contact a:active {
-  transform: scale(0.95);
-  box-shadow: none;
-}
-.features span::after {
-  content: attr(title);
-  position: absolute;
-  bottom: -30px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.75);
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 6px;
-  font-size: 0.75em;
-  white-space: nowrap;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.2s ease;
-}
+    .contact a:active {
+      transform: scale(0.95);
+      box-shadow: none;
+    }
+    .features span::after {
+      content: attr(title);
+      position: absolute;
+      bottom: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.75);
+      color: #fff;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.75em;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
 
-.features span:hover::after {
-  opacity: 1;
-}
-</style>
+    .features span:hover::after {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body>
- 
- <div class="video-bg">
-    <!-- Вставляем YouTube видео -->
-    <iframe src="https://www.youtube.com/embed/i6S_F_JLPfA?autoplay=1&mute=1&loop=1&playlist=i6S_F_JLPfA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-    <div class="overlay"></div>
-    <div class="hero-text">
+  <header>
+    <div class="video-bg">
+      <!-- Встраиваем видео из YouTube -->
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/i6S_F_JLPfA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <div class="overlay"></div>
+      <div class="hero-text">
         <h1 class="lang ru">ВИЛЛА МЕЧТЫ<br>в Компоаморе на Коста-Бланке</h1>
         <h1 class="lang en active">DREAM VILLA<br>in Campoamor on the Costa Blanca</h1>
         <h1 class="lang pl">WILLA MARZEŃ<br>w Campoamor na Costa Blanca</h1>
         <h1 class="lang es">VILLA DE ENSUEÑO<br>en Campoamor, Costa Blanca</h1>
         <nav class="lang-switcher">
-            <button onclick="switchLang('en')" style="background-image: url('https://flagcdn.com/w320/gb.png');">EN</button>
-            <button onclick="switchLang('ru')" style="background-image: url('https://flagcdn.com/w320/ru.png');">RU</button>
-            <button onclick="switchLang('pl')" style="background-image: url('https://flagcdn.com/w320/pl.png');">PL</button>
-            <button onclick="switchLang('es')" style="background-image: url('https://flagcdn.com/w320/es.png');">ES</button>
+          <button onclick="switchLang('en')" style="background-image: url('https://flagcdn.com/w320/gb.png');">EN</button>
+          <button onclick="switchLang('ru')" style="background-image: url('https://flagcdn.com/w320/ru.png');">RU</button>
+          <button onclick="switchLang('pl')" style="background-image: url('https://flagcdn.com/w320/pl.png');">PL</button>
+          <button onclick="switchLang('es')" style="background-image: url('https://flagcdn.com/w320/es.png');">ES</button>
         </nav>
+      </div>
     </div>
-</div>
-</header>
+  </header>
 
-<section class="gallery">
-  <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
-    <a href="photo1.jpg" target="_blank"><img src="photo1.jpg" alt="Photo 1" style="border-radius: 12px; width: 100%; height: auto;"></a>
-    <a href="photo2.jpg" target="_blank"><img src="photo2.jpg" alt="Photo 2" style="border-radius: 12px; width: 100%; height: auto;"></a>
-    <a href="photo3.jpg" target="_blank"><img src="photo3.jpg" alt="Photo 3" style="border-radius: 12px; width: 100%; height: auto;"></a>
-    <a href="photo4.jpg" target="_blank"><img src="photo4.jpg" alt="Photo 4" style="border-radius: 12px; width: 100%; height: auto;"></a>
-    <a href="photo5.jpg" target="_blank"><img src="photo5.jpg" alt="Photo 5" style="border-radius: 12px; width: 100%; height: auto;"></a>
-    <a href="photo6.jpg" target="_blank"><img src="photo6.jpg" alt="Photo 6" style="border-radius: 12px; width: 100%; height: auto;"></a>
-  </div>
-</section>
+  <section class="gallery">
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;">
+      <a href="photo1.jpg" target="_blank"><img src="photo1.jpg" alt="Photo 1" style="border-radius: 12px; width: 100%; height: auto;"></a>
+      <a href="photo2.jpg" target="_blank"><img src="photo2.jpg" alt="Photo 2" style="border-radius: 12px; width: 100%; height: auto;"></a>
+      <a href="photo3.jpg" target="_blank"><img src="photo3.jpg" alt="Photo 3" style="border-radius: 12px; width: 100%; height: auto;"></a>
+      <a href="photo4.jpg" target="_blank"><img src="photo4.jpg" alt="Photo 4" style="border-radius: 12px; width: 100%; height: auto;"></a>
+      <a href="photo5.jpg" target="_blank"><img src="photo5.jpg" alt="Photo 5" style="border-radius: 12px; width: 100%; height: auto;"></a>
+      <a href="photo6.jpg" target="_blank"><img src="photo6.jpg" alt="Photo 6" style="border-radius: 12px; width: 100%; height: auto;"></a>
+    </div>
+  </section>
 
   <section class="description" style="background-image: url('sea-background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-  
-  
     <div class="lang ru active">
-  <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
-    <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
-  </div>
-  <p>В этом эксклюзивном месте расположена уникальная вилла, созданная для тех, кто ценит эстетику, гармонию и комфорт. Расположенная на участке площадью 500 м² и с площадью застройки 320 м², эта недвижимость предлагает жилую площадь около 200 м², залитую естественным светом и оформленную с изысканным вкусом.</p>
-  <p>Каждое окно открывается к морю, превращая интерьер в открытое, свободное пространство, идеально подходящее для отдыха, празднования или созерцания.</p>
-  <p>Вилла располагает четырьмя спальнями с ванными комнатами, каждая из которых оборудована дизайнерской сантехникой. Интерьеры выделяются светлой палитрой, белыми стенами, мрамором, натуральными материалами, большими окнами и дизайнерской мебелью. Всё излучает легкость, изысканность и безмятежность.</p>
-  <p>Бассейн с фонтаном, террасы с панорамным видом на Средиземное море, лаунж-зона, стеклянная лестница как художественный элемент, система умный дом с множеством вариантов освещения, просторные встроенные шкафы, зона барбекю, отдельная прачечная… каждая деталь тщательно продумана, чтобы обеспечить исключительный образ жизни.</p>
-  <div class="features">
-  <div><span title="Участок 🇷🇺 / Plot 🇬🇧 / Działka 🇵🇱 / Parcela 🇪🇸">🌴</span> Участок: 500 м²</div>
-  <div><span title="Площадь застройки 🇷🇺 / Built Area 🇬🇧 / Powierzchnia zabudowy 🇵🇱 / Superficie construida 🇪🇸">🏡</span> Общая площадь застройки: 320 м²</div>
-  <div><span title="Полезная площадь 🇷🇺 / Usable Area 🇬🇧 / Powierzchnia użytkowa 🇵🇱 / Superficie útil 🇪🇸">📐</span> Полезная площадь: 200 м²</div>
-  <div><span title="Спальни 🇷🇺 / Bedrooms 🇬🇧 / Sypialnie 🇵🇱 / Dormitorios 🇪🇸">🛌</span> Спален: 4</div>
-  <div><span title="Санузлы 🇷🇺 / Bathrooms 🇬🇧 / Łazienki 🇵🇱 / Baños 🇪🇸">🚿</span> Санузлов: 4</div>
-  <div><span title="Терраса и парковка 🇷🇺 / Terrace & Parking 🇬🇧 / Taras i parking 🇵🇱 / Terraza y aparcamiento 🇪🇸">🌅</span> Терраса, балкон, парковка включена</div>
-  </div>
-</div>
-</div>
-</div>
-</div>
-    <div class="lang es">
-  <p>Bienvenido a Campoamor, un rincón paradisíaco en la Costa Blanca, donde el mar Mediterráneo se encuentra con una arquitectura luminosa, elegante y con alma.</p>
-  <p>En esta zona exclusiva se encuentra una villa única, creada para quienes valoran la estética, la armonía y el confort. Ubicada en una parcela de 500 m² con una superficie construida de 320 m² y una superficie habitable de unos 200 m², esta propiedad está bañada por la luz natural y decorada con un gusto exquisito.</p>
-  <p>Cada ventana se abre al mar, transformando el interior en un espacio abierto y libre, perfecto para relajarse, celebrar o contemplar.</p>
-  <p>La villa dispone de cuatro dormitorios con baños en suite, todos equipados con grifería de diseño. Los interiores destacan por su paleta clara, paredes blancas, mármol, materiales naturales, grandes ventanales y mobiliario de diseño. Todo irradia ligereza, sofisticación y tranquilidad.</p>
-  <p>Piscina con fuente, terrazas con vistas panorámicas al mar Mediterráneo, zona lounge, escalera de cristal como elemento artístico, sistema de casa inteligente con múltiples opciones de iluminación, amplios armarios empotrados, zona de barbacoa, lavandería independiente… cada detalle ha sido cuidadosamente pensado para ofrecer un estilo de vida excepcional.</p>
-  <div class="features">
-    <div><span title="Участок 🇷🇺 / Plot 🇬🇧 / Działka 🇵🇱 / Parcela 🇪🇸">🌴</span> Parcela: 500 m²</div>
-    <div><span title="Площадь застройки 🇷🇺 / Built Area 🇬🇧 / Powierzchnia zabudowy 🇵🇱 / Superficie construida 🇪🇸">🏡</span> Superficie construida: 320 m²</div>
-    <div><span title="Полезная площадь 🇷🇺 / Usable Area 🇬🇧 / Powierzchnia użytkowa 🇵🇱 / Superficie útil 🇪🇸">📐</span> Superficie útil: 200 m²</div>
-    <div><span title="Спальни 🇷🇺 / Bedrooms 🇬🇧 / Sypialnie 🇵🇱 / Dormitorios 🇪🇸">🛌</span> Dormitorios: 4</div>
-    <div><span title="Санузлы 🇷🇺 / Bathrooms 🇬🇧 / Łazienki 🇵🇱 / Baños 🇪🇸">🚿</span> Baños: 4</div>
-    <div><span title="Терраса и парковка 🇷🇺 / Terrace & Parking 🇬🇧 / Taras i parking 🇵🇱 / Terraza y aparcamiento 🇪🇸">🌅</span> Terraza, balcón, aparcamiento incluido</div>
-  </div>
-</div>
-    
-  </div>
-</div>
-    <div class="lang en active">
-  <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
-    <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
-  </div>
-  <p>Nestled in an exclusive area of Campoamor, this unique villa is designed for those who appreciate aesthetics, harmony, and comfort. Located on a 500 m² plot with a total built area of 320 m² and about 200 m² of usable living space, it is bathed in natural light and styled with refined taste.</p>
-  <p>Every window opens to the sea, transforming the interior into an open and airy space — ideal for relaxation, celebration, or quiet contemplation.</p>
-  <p>The villa includes four en-suite bedrooms, each featuring designer sanitary fittings. The interiors shine with a light palette, white walls, marble, natural materials, large windows, and custom-designed furniture — all radiating lightness, sophistication, and serenity.</p>
-  <p>A pool with a fountain, terraces with panoramic views of the Mediterranean Sea, a lounge zone, a sculptural glass staircase, a smart home system with ambient lighting modes, built-in wardrobes, BBQ zone, and a separate laundry room… every detail has been carefully thought out to provide an exceptional lifestyle.</p>
-  <div class="features">
-    <div><span title="Участок 🇷🇺 / Plot 🇬🇧 / Działka 🇵🇱 / Parcela 🇪🇸">🌴</span> Plot: 500 m²</div>
-    <div><span title="Площадь застройки 🇷🇺 / Built Area 🇬🇧 / Powierzchnia zabudowy 🇵🇱 / Superficie construida 🇪🇸">🏡</span> Total built area: 320 m²</div>
-    <div><span title="Полезная площадь 🇷🇺 / Usable Area 🇬🇧 / Powierzchnia użytkowa 🇵🇱 / Superficie útil 🇪🇸">📐</span> Usable area: 200 m²</div>
-    <div><span title="Спальни 🇷🇺 / Bedrooms 🇬🇧 / Sypialnie 🇵🇱 / Dormitorios 🇪🇸">🛌</span> Bedrooms: 4</div>
-    <div><span title="Санузлы 🇷🇺 / Bathrooms 🇬🇧 / Łazienki 🇵🇱 / Baños 🇪🇸">🚿</span> Bathrooms: 4</div>
-    <div><span title="Терраса и парковка 🇷🇺 / Terrace & Parking 🇬🇧 / Taras i parking 🇵🇱 / Terraza y aparcamiento 🇪🇸">🌅</span> Terrace, balcony, parking included</div>
-  </div>
-</div>
-  <div class="lang pl">
-  <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
-    <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
-  </div>
-  <p>W tej ekskluzywnej dzielnicy Campoamor znajduje się wyjątkowa willa stworzona dla osób ceniących estetykę, harmonię i komfort. Zlokalizowana na działce o powierzchni 500 m², z 320 m² powierzchni zabudowy i około 200 m² powierzchni użytkowej, jest zalana naturalnym światłem i urządzona ze smakiem.</p>
-  <p>Każde okno otwiera się na morze, przekształcając wnętrze w otwartą i przestronną przestrzeń — idealną do relaksu, świętowania lub kontemplacji.</p>
-  <p>Willa posiada cztery sypialnie z łazienkami, każda wyposażona w designerską armaturę. Wnętrza wyróżniają się jasną kolorystyką, białymi ścianami, marmurem, naturalnymi materiałami, dużymi oknami i meblami na zamówienie — wszystko emanuje lekkością, elegancją i spokojem.</p>
-  <p>Basen z fontanną, tarasy z panoramicznym widokiem na Morze Śródziemne, strefa relaksu, szklane schody jako element artystyczny, system inteligentnego domu z różnymi opcjami oświetlenia, wbudowane szafy, strefa grillowa i osobna pralnia… każdy szczegół został starannie zaplanowany, aby zapewnić wyjątkowy styl życia.</p>
-  <div class="features">
-    <div><span title="Участок 🇷🇺 / Plot 🇬🇧 / Działka 🇵🇱 / Parcela 🇪🇸">🌴</span> Działka: 500 m²</div>
-    <div><span title="Площадь застройки 🇷🇺 / Built Area 🇬🇧 / Powierzchnia zabudowy 🇵🇱 / Superficie construida 🇪🇸">🏡</span> Powierzchnia zabudowy: 320 m²</div>
-    <div><span title="Полезная площадь 🇷🇺 / Usable Area 🇬🇧 / Powierzchnia użytkowa 🇵🇱 / Superficie útil 🇪🇸">📐</span> Powierzchnia użytkowa: 200 m²</div>
-    <div><span title="Спальни 🇷🇺 / Bedrooms 🇬🇧 / Sypialnie 🇵🇱 / Dormitorios 🇪🇸">🛌</span> Sypialnie: 4</div>
-    <div><span title="Санузлы 🇷🇺 / Bathrooms 🇬🇧 / Łazienki 🇵🇱 / Baños 🇪🇸">🚿</span> Łazienki: 4</div>
-    <div><span title="Терраса и парковка 🇷🇺 / Terrace & Parking 🇬🇧 / Taras i parking 🇵🇱 / Terraza y aparcamiento 🇪🇸">🌅</span> Taras, balkon, miejsce parkingowe w cenie</div>
-  </div>
-</div>
-</section>
-<section class="contact" style="text-align: center;">
-  <div class="lang ru active">
+      <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
+        <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
+      </div>
+      <p>В этом эксклюзивном месте расположена уникальная вилла...</p>
+      <div class="features">
+        <div><span title="Участок 🇷🇺 / Plot 🇬🇧 / Działka 🇵🇱 / Parcela 🇪🇸">🌴</span> Участок: 500 м²</div>
+        <div><span title="Площадь застройки 🇷🇺 / Built Area 🇬🇧 / Powierzchnia zabudowy 🇵🇱 / Superficie construida 🇪🇸">🏡</span> Общая площадь застройки: 320 м²</div>
+        <div><span title="Полезная площадь 🇷🇺 / Usable Area 🇬🇧 / Powierzchnia użytkowa 🇵🇱 / Superficie útil 🇪🇸">📐</span> Полезная площадь: 200 м²</div>
+        <div><span title="Спальни 🇷🇺 / Bedrooms 🇬🇧 / Sypialnie 🇵🇱 / Dormitorios 🇪🇸">🛌</span> Спален: 4</div>
+        <div><span title="Санузлы 🇷🇺 / Bathrooms 🇬🇧 / Łazienki 🇵🇱 / Baños 🇪🇸">🚿</span> Санузлов: 4</div>
+      </div>
+    </div>
+  </section>
+  
+  <section class="contact" style="text-align: center;">
     <p>Свяжитесь со мной в WhatsApp – Ольга:</p>
     <p style="font-size: 0.95em; color: #555;">+34 604 158 859</p>
-  </div>
-  <div class="lang en">
-    <p>Contact me via WhatsApp – Olga:</p>
-    <p style="font-size: 0.95em; color: #555;">+34 604 158 859</p>
-  </div>
-  <div class="lang pl">
-    <p>Skontaktuj się ze mną przez WhatsApp – Olga:</p>
-    <p style="font-size: 0.95em; color: #555;">+34 604 158 859</p>
-  </div>
-  <div class="lang es">
-    <p>Contáctame por WhatsApp – Olga:</p>
-    <p style="font-size: 0.95em; color: #555;">+34 604 158 859</p>
-  </div>
-  <a href="https://wa.me/34604158859" target="_blank">Message on WhatsApp</a>
-</section>
+    <a href="https://wa.me/34604158859" target="_blank">Message on WhatsApp</a>
+  </section>
 
   <script>
     function switchLang(lang) {
@@ -382,14 +261,14 @@ nav.lang-switcher button:active {
       document.querySelectorAll('.' + lang).forEach(el => el.classList.add('active'));
     }
   </script>
-<audio id="clickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3"></audio>
-<script>
-  const whatsappBtn = document.querySelector('.contact a');
-  const clickSound = document.getElementById('clickSound');
-  whatsappBtn.addEventListener('mousedown', () => {
-    clickSound.currentTime = 0;
-    clickSound.play();
-  });
-</script>
+  <audio id="clickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3"></audio>
+  <script>
+    const whatsappBtn = document.querySelector('.contact a');
+    const clickSound = document.getElementById('clickSound');
+    whatsappBtn.addEventListener('mousedown', () => {
+      clickSound.currentTime = 0;
+      clickSound.play();
+    });
+  </script>
 </body>
 </html>
