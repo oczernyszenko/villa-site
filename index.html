@@ -236,15 +236,59 @@
     </div>
   </section>
 
-  <section class="description" style="background-image: url('sea-background.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat;">
-    <div class="lang ru active">
-      <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
-        <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
-      </div>
-      <p>В этом эксклюзивном месте расположена уникальная вилла...</p> <!-- Описание виллы -->
-    </div>
-  </section>
+ <section class="description">
+  <!-- Кнопки для выбора языка -->
+  <nav class="lang-switcher">
+    <button onclick="switchLang('ru')" style="background-image: url('https://flagcdn.com/w320/ru.png');">RU</button>
+    <button onclick="switchLang('en')" style="background-image: url('https://flagcdn.com/w320/gb.png');">EN</button>
+    <button onclick="switchLang('pl')" style="background-image: url('https://flagcdn.com/w320/pl.png');">PL</button>
+    <button onclick="switchLang('es')" style="background-image: url('https://flagcdn.com/w320/es.png');">ES</button>
+  </nav>
 
+  <!-- Описание на русском языке -->
+  <div class="lang ru active">
+    <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
+      <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
+    </div>
+    <p>В этом эксклюзивном месте расположена уникальная вилла, созданная для тех, кто ценит эстетику, гармонию и комфорт. Расположенная на участке площадью 500 м² и с площадью застройки 320 м², эта недвижимость предлагает жилую площадь около 200 м², залитую естественным светом и оформленную с изысканным вкусом.</p>
+    <p>Каждое окно открывается к морю, превращая интерьер в открытое, свободное пространство, идеально подходящее для отдыха, празднования или созерцания.</p>
+  </div>
+
+  <!-- Описание на английском языке -->
+  <div class="lang en">
+    <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
+      <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
+    </div>
+    <p>This unique villa is located in an exclusive area of Campoamor, designed for those who appreciate aesthetics, harmony, and comfort. Located on a 500 m² plot with a total built area of 320 m² and around 200 m² of usable living space, this property is bathed in natural light and decorated with refined taste.</p>
+    <p>Every window opens to the sea, transforming the interior into an open, free space, perfect for relaxation, celebration, or contemplation.</p>
+  </div>
+
+  <!-- Описание на польском языке -->
+  <div class="lang pl">
+    <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
+      <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
+    </div>
+    <p>W tej ekskluzywnej dzielnicy Campoamor znajduje się wyjątkowa willa, stworzona dla osób ceniących estetykę, harmonię i komfort. Zlokalizowana na działce o powierzchni 500 m² z 320 m² powierzchni zabudowy i około 200 m² powierzchni użytkowej, ta nieruchomość jest pełna naturalnego światła i urządzona z wyrafinowanym smakiem.</p>
+    <p>Każde okno otwiera się na morze, przekształcając wnętrze w przestronną i otwartą przestrzeń, idealną do relaksu, świętowania lub kontemplacji.</p>
+  </div>
+
+  <!-- Описание на испанском языке -->
+  <div class="lang es">
+    <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
+      <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
+    </div>
+    <p>En esta exclusiva zona de Campoamor se encuentra una villa única, creada para aquellos que valoran la estética, la armonía y el confort. Situada en una parcela de 500 m² con 320 m² de área construida y aproximadamente 200 m² de área útil, esta propiedad está bañada en luz natural y decorada con un gusto refinado.</p>
+    <p>Cada ventana se abre al mar, transformando el interior en un espacio abierto y libre, perfecto para relajarse, celebrar o contemplar.</p>
+  </div>
+</section>
+
+<script>
+  function switchLang(lang) {
+    // Убираем класс "active" у всех элементов с классом "lang"
+    document.querySelectorAll('.lang').forEach(el => el.classList.remove('active'));
+    // Добавляем класс "active" к выбранному языковому блоку
+    document.querySelectorAll('.' + lang).forEach(el => el.classList.add('active'));
+  
   <section class="contact" style="text-align: center;">
     <div class="lang ru active">
       <p>Свяжитесь со мной в WhatsApp – Ольга:</p>
