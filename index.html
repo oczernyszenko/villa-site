@@ -49,7 +49,7 @@
       z-index: 3;
       text-align: center;
       color: #fff;
-      top: 70%; /* Опускаем текст ниже */
+      top: 70%;
       width: 100%;
       transform: translateY(-50%);
     }
@@ -63,55 +63,114 @@
       text-shadow: 0 2px 6px rgba(0,0,0,0.5);
     }
 
-    nav.lang-switcher {
-      margin-top: 20px;
+    .description {
+      text-align: justify;
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    .description h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2em;
+      color: #2c7a7b;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      font-size: 1.1em;
+      margin-top: 40px;
+    }
+
+    .features div {
+      background: #f9f9f9;
+      border-radius: 12px;
+      padding: 20px;
       display: flex;
-      justify-content: center;
-      gap: 10px;
+      align-items: center;
+      gap: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: transform 0.3s ease;
     }
 
-    nav.lang-switcher button {
-      margin: 0 5px;
-      padding: 10px 18px;
+    .features div:hover {
+      transform: translateY(-4px);
+    }
+
+    .contact a {
+      display: inline-block;
+      background-color: #25D366;
+      color: #333;
+      text-decoration: none;
       font-weight: 600;
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-size: 1.1em;
       transition: all 0.2s ease;
-      font-size: 1em;
-      text-transform: uppercase;
-      position: relative;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
     }
 
-    .lang { display: none; }
-    .lang.active { display: block; }
+    .contact a:hover {
+      background-color: #1DA851;
+    }
+
+    .contact a:active {
+      transform: scale(0.95);
+      box-shadow: none;
+    }
+
   </style>
 </head>
 <body>
   <header>
     <div class="video-bg">
-      <!-- Встраиваем видео YouTube -->
-      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/i6S_F_JLPfA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <!-- Встраиваем YouTube видео с параметром autoplay=1 для автоматического запуска -->
+      <iframe width="100%" height="100%" src="https://www.youtube.com/embed/i6S_F_JLPfA?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="overlay"></div>
       <div class="hero-text">
         <h1 class="lang ru">ВИЛЛА МЕЧТЫ<br>в Компоаморе на Коста-Бланке</h1>
-        <h1 class="lang en active">DREAM VILLA<br>in Campoamor on the Costa Blanca</h1>
-        <h1 class="lang pl">WILLA MARZEŃ<br>w Campoamor na Costa Blanca</h1>
-        <h1 class="lang es">VILLA DE ENSUEÑO<br>en Campoamor, Costa Blanca</h1>
-        <nav class="lang-switcher">
-          <button onclick="switchLang('en')" style="background-image: url('https://flagcdn.com/w320/gb.png');">EN</button>
-          <button onclick="switchLang('ru')" style="background-image: url('https://flagcdn.com/w320/ru.png');">RU</button>
-          <button onclick="switchLang('pl')" style="background-image: url('https://flagcdn.com/w320/pl.png');">PL</button>
-          <button onclick="switchLang('es')" style="background-image: url('https://flagcdn.com/w320/es.png');">ES</button>
-        </nav>
       </div>
     </div>
   </header>
+
+  <section class="description">
+    <h2>Вилла, где мечты становятся реальностью – Кампоамор, Коста-Бланка</h2>
+    <p>Добро пожаловать в Кампоамор, райский уголок на Коста-Бланке, где Средиземное море сливается с яркой, элегантной и наполненной душой архитектурой.</p>
+    <p>В этом эксклюзивном месте расположена уникальная вилла, созданная для тех, кто ценит эстетику, гармонию и комфорт. Расположенная на участке площадью 500 м² и с площадью застройки 320 м², эта недвижимость предлагает жилую площадь около 297 м², залитую естественным светом и оформленную с изысканным вкусом.</p>
+    <p>Каждое окно открывается к морю, превращая интерьер в открытое, свободное пространство, идеально подходящее для отдыха, празднования или созерцания.</p>
+    <p>Вилла располагает четырьмя спальнями с ванными комнатами, каждая из которых оборудована дизайнерской сантехникой. Интерьеры выделяются светлой палитрой, белыми стенами, мрамором, натуральными материалами, большими окнами и дизайнерской мебелью. Всё излучает легкость, изысканность и безмятежность.</p>
+    <p>Бассейн с фонтаном, террасы с панорамным видом на Средиземное море, лаунж-зона, стеклянная лестница как художественный элемент, система умный дом с множеством вариантов освещения, просторные встроенные шкафы, зона барбекю, отдельная прачечная… каждая деталь тщательно продумана, чтобы обеспечить исключительный образ жизни.</p>
+    <p>Архитектурная жемчужина в одном из самых престижных мест испанского побережья. Идеально подходит для тех, кто ищет не просто дом, а стиль жизни.</p>
+
+    <h3>Базовые характеристики</h3>
+    <ul>
+      <li>Отдельный дом или коттедж</li>
+      <li>320 м2 общих, 200 м2 полезных</li>
+      <li>Спален: 4</li>
+      <li>Санузлов: 4</li>
+      <li>Участок в 500 м²</li>
+      <li>Терраса и балкон</li>
+      <li>Парковочное место включено в стоимость</li>
+      <li>Вторичное жилье/хорошее состояние</li>
+      <li>Встроенные шкафы</li>
+      <li>Подсобное помещение</li>
+    </ul>
+
+    <h3>Оснащение</h3>
+    <ul>
+      <li>Кондиционер</li>
+      <li>Бассейн</li>
+      <li>Сад</li>
+    </ul>
+  </section>
+
+  <section class="contact" style="text-align: center;">
+    <a href="https://wa.me/34604158859" target="_blank">Message on WhatsApp</a>
+  </section>
 
   <script>
     function switchLang(lang) {
