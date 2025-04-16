@@ -18,16 +18,22 @@
       overflow: hidden;
     }
 <div class="video-bg">
-    <!-- Заменяем видео с фоном на видео с YouTube -->
-    <iframe width="100%" height="600" src="https://youtu.be/i6S_F_JLPfA?si=iHKBUzXvZ_jb3Qze" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- Вставляем YouTube видео -->
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/i6S_F_JLPfA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     <div class="overlay"></div>
     <div class="hero-text">
       <h1 class="lang ru">ВИЛЛА МЕЧТЫ<br>в Компоаморе на Коста-Бланке</h1>
       <h1 class="lang en active">DREAM VILLA<br>in Campoamor on the Costa Blanca</h1>
       <h1 class="lang pl">WILLA MARZEŃ<br>w Campoamor na Costa Blanca</h1>
       <h1 class="lang es">VILLA DE ENSUEÑO<br>en Campoamor, Costa Blanca</h1>
+      <nav class="lang-switcher">
+        <button onclick="switchLang('en')" style="background-image: url('https://flagcdn.com/w320/gb.png');">EN</button>
+        <button onclick="switchLang('ru')" style="background-image: url('https://flagcdn.com/w320/ru.png');">RU</button>
+        <button onclick="switchLang('pl')" style="background-image: url('https://flagcdn.com/w320/pl.png');">PL</button>
+        <button onclick="switchLang('es')" style="background-image: url('https://flagcdn.com/w320/es.png');">ES</button>
+      </nav>
     </div>
-  </div>
+  </div>  </div>
     <section class="gallery">
     <a href="photo1.jpg" target="_blank"><img src="photo1.jpg" alt="Photo 1"></a>
     <a href="photo2.jpg" target="_blank"><img src="photo2.jpg" alt="Photo 2"></a>
