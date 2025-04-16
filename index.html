@@ -23,6 +23,7 @@
       width: 100%;
       height: 100%;
     }
+
     .video-bg iframe {
       position: absolute;
       top: 0;
@@ -31,6 +32,7 @@
       height: 100% !important;
       object-fit: cover;
     }
+    
     .video-bg .overlay {
       position: absolute;
       top: 0;
@@ -202,9 +204,10 @@
   </style>
 </head>
 <body>
+
   <header>
     <div class="video-bg">
-      <!-- Встраиваем видео из YouTube -->
+      <!-- Вставляем YouTube видео -->
       <iframe width="100%" height="100%" src="https://www.youtube.com/embed/i6S_F_JLPfA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       <div class="overlay"></div>
       <div class="hero-text">
@@ -238,20 +241,15 @@
       <div style="background: #f3f3f3; padding: 20px; margin-bottom: 30px; border-radius: 12px; text-align: center; font-size: 1.3em; font-weight: 600; color: white; animation: glow 2s infinite alternate;">
         <span style="font-size: 1.8em; color: #2c7a7b; font-weight: 700; display: inline-block; margin-top: 10px;">$1 470 000</span>
       </div>
-      <p>В этом эксклюзивном месте расположена уникальная вилла...</p>
-      <div class="features">
-        <div><span title="Участок 🇷🇺 / Plot 🇬🇧 / Działka 🇵🇱 / Parcela 🇪🇸">🌴</span> Участок: 500 м²</div>
-        <div><span title="Площадь застройки 🇷🇺 / Built Area 🇬🇧 / Powierzchnia zabudowy 🇵🇱 / Superficie construida 🇪🇸">🏡</span> Общая площадь застройки: 320 м²</div>
-        <div><span title="Полезная площадь 🇷🇺 / Usable Area 🇬🇧 / Powierzchnia użytkowa 🇵🇱 / Superficie útil 🇪🇸">📐</span> Полезная площадь: 200 м²</div>
-        <div><span title="Спальни 🇷🇺 / Bedrooms 🇬🇧 / Sypialnie 🇵🇱 / Dormitorios 🇪🇸">🛌</span> Спален: 4</div>
-        <div><span title="Санузлы 🇷🇺 / Bathrooms 🇬🇧 / Łazienki 🇵🇱 / Baños 🇪🇸">🚿</span> Санузлов: 4</div>
-      </div>
+      <p>В этом эксклюзивном месте расположена уникальная вилла...</p> <!-- Описание виллы -->
     </div>
   </section>
-  
+
   <section class="contact" style="text-align: center;">
-    <p>Свяжитесь со мной в WhatsApp – Ольга:</p>
-    <p style="font-size: 0.95em; color: #555;">+34 604 158 859</p>
+    <div class="lang ru active">
+      <p>Свяжитесь со мной в WhatsApp – Ольга:</p>
+      <p style="font-size: 0.95em; color: #555;">+34 604 158 859</p>
+    </div>
     <a href="https://wa.me/34604158859" target="_blank">Message on WhatsApp</a>
   </section>
 
@@ -261,14 +259,6 @@
       document.querySelectorAll('.' + lang).forEach(el => el.classList.add('active'));
     }
   </script>
-  <audio id="clickSound" src="https://assets.mixkit.co/sfx/preview/mixkit-select-click-1109.mp3"></audio>
-  <script>
-    const whatsappBtn = document.querySelector('.contact a');
-    const clickSound = document.getElementById('clickSound');
-    whatsappBtn.addEventListener('mousedown', () => {
-      clickSound.currentTime = 0;
-      clickSound.play();
-    });
-  </script>
+
 </body>
 </html>
